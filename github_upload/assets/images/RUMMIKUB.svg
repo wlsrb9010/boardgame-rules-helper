@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" width="480" height="300">
+  <defs>
+    <linearGradient id="table" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2c4a7a"/>
+      <stop offset="1" stop-color="#1b2f52"/>
+    </linearGradient>
+    <linearGradient id="wood" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c98a4b"/>
+      <stop offset="1" stop-color="#8a5a2b"/>
+    </linearGradient>
+    <linearGradient id="tile" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fffaf0"/>
+      <stop offset="1" stop-color="#efe3c8"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="2.5" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+    <!-- 타일 한 장(왼쪽 위 기준, 44x60) -->
+    <rect id="t" width="44" height="60" rx="6" fill="url(#tile)" stroke="#d6c7a6" stroke-width="1"/>
+  </defs>
+
+  <rect width="480" height="300" rx="18" fill="url(#table)"/>
+
+  <!-- 테이블 위 세트: 런(주황 4-5-6-7) -->
+  <g font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="28" text-anchor="middle" filter="url(#shadow)">
+    <g transform="translate(36 34)">
+      <use href="#t" x="0"/><text x="22" y="40" fill="#e07b16">4</text>
+      <use href="#t" x="48"/><text x="70" y="40" fill="#e07b16">5</text>
+      <use href="#t" x="96"/><text x="118" y="40" fill="#e07b16">6</text>
+      <use href="#t" x="144"/><text x="166" y="40" fill="#e07b16">7</text>
+    </g>
+    <!-- 그룹(9: 검정 · 빨강 · 파랑) -->
+    <g transform="translate(286 34)">
+      <use href="#t" x="0"/><text x="22" y="40" fill="#1d1d1f">9</text>
+      <use href="#t" x="48"/><text x="70" y="40" fill="#d1312b">9</text>
+      <use href="#t" x="96"/><text x="118" y="40" fill="#1f5fc4">9</text>
+    </g>
+  </g>
+
+  <!-- 받침대 -->
+  <g filter="url(#shadow)">
+    <path d="M24 262 L456 262 L444 286 L36 286 Z" fill="#6e4520"/>
+    <path d="M30 176 L450 176 L456 262 L24 262 Z" fill="url(#wood)"/>
+    <rect x="30" y="214" width="420" height="5" fill="#7a4c22" opacity="0.6"/>
+  </g>
+
+  <!-- 받침대 위 타일 -->
+  <g font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="26" text-anchor="middle">
+    <g transform="translate(46 150)">
+      <use href="#t" x="0"/><text x="22" y="38" fill="#d1312b">1</text>
+      <use href="#t" x="48"/><text x="70" y="38" fill="#1f5fc4">3</text>
+      <use href="#t" x="96"/><text x="118" y="38" fill="#1d1d1f">8</text>
+      <use href="#t" x="144"/><text x="166" y="38" fill="#e07b16">11</text>
+      <use href="#t" x="192"/><text x="214" y="38" fill="#d1312b">12</text>
+      <use href="#t" x="240"/><text x="262" y="38" fill="#1f5fc4">13</text>
+      <!-- 조커 -->
+      <use href="#t" x="288"/>
+      <g transform="translate(310 26)">
+        <circle r="13" fill="#f4c20d" stroke="#d1312b" stroke-width="2.5"/>
+        <circle cx="-4.5" cy="-3" r="2" fill="#1d1d1f"/>
+        <circle cx="4.5" cy="-3" r="2" fill="#1d1d1f"/>
+        <path d="M-6 3 Q0 9 6 3" fill="none" stroke="#1d1d1f" stroke-width="2" stroke-linecap="round"/>
+      </g>
+      <use href="#t" x="336"/><text x="358" y="38" fill="#1d1d1f">5</text>
+    </g>
+  </g>
+</svg>
